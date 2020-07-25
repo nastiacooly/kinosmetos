@@ -12,37 +12,61 @@
 </head>
 <body>
 
-    <header>
+    <section class="enterOverlay" id="enterScreen">
         <div class="container">
-            <div class="logo">
-                <p class="logo__text">Киносметос</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/channel/avatar.png" alt="channel_photo" class="enterOverlay__img">
+                    <p class="enterOverlay__title bigLogo">Киносметос</p>
+                    <p class="enterOverlay__welcome mediumText">Добро пожаловать на сайт канала "Киносметос"!</p>
+                    <p class="enterOverlay__descr mediumText">Здесь вы можете почитать мои субъективные обзоры на недавно просмотренные фильмы, сериалы и пройденные игры.</p>
+                    <button class="button button_medium" onclick="toHide()">
+                        <a href="#header" alt="enter_link" class="enterOverlay__link mediumText">Хочу почитать!</a>
+                    </button>
+                </div>
             </div>
         </div>
-        <nav>
-            <div class="container">
-                <ul class="navbar">
 
 
+    </section>
 
-                </ul>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="header__logo">
+                        <p class="header__logo__text bigLogo">Киносметос</p>
+                    </div>
+                </div>
 
+                <div class="cold-md-6">
+                    <nav>
+                        <ul class="header__navbar">
+                            <li class="header__navbar__item mediumText"><a href="t.me/nastiacooly" alt="contact_author" class="hoverDark">Написать автору</a></li>
+                            <li class="header__navbar__item mediumText"><a href="t.me/kinosmetos" alt="sign_up_to_channel" class="hoverDark">Подписаться в телеграм</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
             </div>
-
-        </nav>
+            
+        </div>
 
     </header>
 
-    <section>
+    <section class="blog">
 
         
     </section>
 
-    <footer>
+    <footer class="footer">
 
 
 
     </footer>
 
+
+    <script src="js/script.js"></script>
     
 </body>
 </html>
