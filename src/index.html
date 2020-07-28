@@ -7,6 +7,7 @@
     <title>Киносметос</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"> <!--подключение библиотеки анимаций-->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,700;1,500&family=Oswald:wght@200;300;400&family=Pacifico&display=swap" rel="stylesheet"> <!--подключение шрифтов Google Fonts-->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -20,8 +21,8 @@
                     <p class="enterOverlay__title bigLogo">Киносметос</p>
                     <p class="enterOverlay__welcome mediumText">Добро пожаловать на сайт канала "Киносметос"!</p>
                     <p class="enterOverlay__descr mediumText">Здесь вы можете почитать мои субъективные обзоры на недавно просмотренные фильмы, сериалы и пройденные игры.</p>
-                    <button class="button button_medium" onclick="addHideAnimation()">
-                        <a href="#header" alt="enter_link" class="enterOverlay__link mediumText">Хочу почитать!</a>
+                    <button class="button button_medium mediumText" onclick="addFadeOutUpAnimation()">
+                        Хочу почитать!
                     </button>
                 </div>
             </div>
@@ -29,20 +30,20 @@
 
     </section>
 
-    <header class="header" id="header">
+    <header class="header notDisplayed" id="header">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="header__logo">
-                        <p class="header__logo__text bigLogo">Киносметос</p>
+                        <p class="header__logo__text bigLogo" id="mainLogo">Киносметос</p>
                     </div>
                 </div>
 
                 <div class="cold-md-6">
                     <nav>
                         <ul class="header__navbar">
-                            <li class="header__navbar__item mediumText"><a href="t.me/nastiacooly" alt="contact_author" class="hoverDark">Написать автору</a></li>
-                            <li class="header__navbar__item mediumText"><a href="t.me/kinosmetos" alt="sign_up_to_channel" class="hoverDark">Подписаться в телеграм</a></li>
+                            <li class="header__navbar__item mediumText hoverScale"><a href="https://t.me/nastiacooly" alt="contact_author" class="hoverDark">Написать автору</a></li>
+                            <li class="header__navbar__item mediumText hoverScale"><a href="https://t.me/kinosmetos" alt="sign_up_to_channel" class="hoverDark">Подписаться в телеграм</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -53,7 +54,7 @@
 
     </header>
 
-    <section class="blog">
+    <section class="blog notDisplayed" id="blog">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -256,12 +257,59 @@
 
 
             </div>
+
+            <div class="col-md-12" id="loading">
+                <div class="loading">
+                    <button class="button button_medium mediumText" id="moreButton" onclick="loadContent()">Хочу еще!</button>
+                </div>
+            </div>
+
         </div>
 
         
     </section>
 
-    <footer class="footer">
+    <section class="blog notDisplayed" id="blogSecond">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <article class="blog__post">
+
+                        <div class="blog__post__descrContainer">
+                            <div class="blog__post__poster">
+                                <img src="img/posters/dead_to_me.jpg" alt="poster">
+                            </div>
+    
+                            <div class="blog__post__header">
+                                <p class="blog__post__header__rustitle bigText">Мертв для меня</p>
+                                <p class="blog__post__header__engtitle bigText">Dead to Me</p>
+                                <p class="blog__post__header__year mediumText">2019 - ...</p>
+                                <p class="blog__post__header__tags mediumText">#драма #комедия #детектив #Netflix</p>
+                            </div>
+
+                        </div>
+
+                        <div class="blog__post__review">
+                            <p class="blog__post__review__opinion mediumText"><span class="boldText">Общий вердикт:</span> смотреть тем, кто ищет легкий сериал для просмотра будним вечерком и кто ценит черный юмор с щепоткой детективных историй.</p>
+                            <p class="blog__post__review__more mediumText">Мои подробные комментарии читать
+                                <a href="https://telegra.ph/Dead-to-Me-2019-07-22" alt="telegraph post" class="blog__post__review__more__link boldText">тут</a>.
+                            </p>
+                        </div>
+
+                        <div class="blog__post__data">
+                            <p class="simpleText italicText">Опубликовано: 22 июля 2020 г.</p>
+                        </div>
+                   
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer notDisplayed" id="footer">
 
 
 
