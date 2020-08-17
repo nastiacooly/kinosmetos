@@ -65,3 +65,15 @@ window.onload = function () {
         behavior: 'smooth'
       });
   }
+
+  //функция для фильтрации контента по типу (фильмы, сериалы, игры) - ДОДЕЛАТЬ И ПРОВЕРИТЬ (в html пока ничего не меняла)
+  function filterByType(type) {
+    let elements = document.querySelectorAll("article.blog__post");
+    for (let elem of elements) {
+        if (elem.matches(type) == false) {
+          addClass(elem, "notDisplayed");
+        };
+      };
+  }
+  
+  
