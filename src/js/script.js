@@ -9,7 +9,7 @@ const loadingBlock = document.getElementById("loading");
 
 function removeClass(element, nameOfClass) {
     element.classList.remove(nameOfClass);
-};
+}
 
 function addClass(element, nameOfClass) {
     element.classList.add(nameOfClass);
@@ -49,31 +49,29 @@ window.onload = function () {
         removeClass(mainLogo, "animate__animated");
         removeClass(mainLogo, "animate__shakeY");
     };
-  }
+};
 
-  //loading of content by clicking the button
+//loading of content by clicking the button
 
-  function loadContent() {
-      addClass(moreButton, "animate__animated");
-      addClass(moreButton, "animate__fadeOut");
-      addClass(loadingBlock, "notDisplayed");
-      removeClass(blogSecond, "notDisplayed");
-      addClass(blogSecond, "animate__animated");
-      addClass(blogSecond, "animate__fadeInUp");
-      window.scrollBy({
+function loadContent() {
+    addClass(moreButton, "animate__animated");
+    addClass(moreButton, "animate__fadeOut");
+    addClass(loadingBlock, "notDisplayed");
+    removeClass(blogSecond, "notDisplayed");
+    addClass(blogSecond, "animate__animated");
+    addClass(blogSecond, "animate__fadeInUp");
+    window.scrollBy({
         top: 500,
         behavior: 'smooth'
-      });
-  }
+    });
+}
 
-  //функция для фильтрации контента по типу (фильмы, сериалы, игры) - ДОДЕЛАТЬ И ПРОВЕРИТЬ (в html пока ничего не меняла)
-  function filterByType(type) {
+//функция для фильтрации контента по типу (фильмы, сериалы, игры) - ДОДЕЛАТЬ И ПРОВЕРИТЬ (в html пока ничего не меняла)
+function filterByType(type) {
     let elements = document.querySelectorAll("article.blog__post");
     for (let elem of elements) {
         if (elem.matches(type) == false) {
-          addClass(elem, "notDisplayed");
-        };
-      };
-  }
-  
-  
+            addClass(elem, "notDisplayed");
+        }
+    }
+}
